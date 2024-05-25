@@ -9,10 +9,11 @@ const Home = () => {
         <div className="wrapper">
           <h1 className="title">Find Real Estate & Get Your Dream Place</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-            explicabo suscipit cum eius, iure est nulla animi consequatur
-            facilis id pariatur fugit quos laudantium temporibus dolor ea
-            repellat provident impedit!
+            Choosing between renting and buying a home is a significant decision
+            that depends on various factors. Each option has its benefits and
+            drawbacks. Renting offers flexibility and less responsibility for
+            maintenance, while buying provides stability and the potential for
+            property appreciation.
           </p>
           <SearchBar />
           <div className="boxes">

@@ -23,7 +23,7 @@ const SingleList = (list: ListDataType) => {
       </Link>
       <div className="textContainer">
         <h2 className="title">
-          <Link to={`/${id}`}>{title}</Link>
+          <Link to={`/lists/${id}`}>{title}</Link>
         </h2>
         <p className="address">
           <img src="/pin.png" alt="" />

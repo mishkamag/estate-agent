@@ -1,4 +1,5 @@
 import Filter from "../../components/filter/Filter";
+import Map from "../../components/map/Map";
 import SingleList from "../../components/singleList/SingleList";
 import { listData } from "../../data";
 import "./lists.scss";
@@ -14,7 +15,9 @@ const Lists = () => {
           ))}
         </div>
       </div>
-      <div className="mapContainer">Map</div>
+      <div className="mapContainer">
+        <Map listData={listData} />
+      </div>
     </section>
   );
 };

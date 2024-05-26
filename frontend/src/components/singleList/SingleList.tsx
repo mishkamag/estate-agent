@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./singleList.scss";
 
-type ListDataType = {
+export type ListDataType = {
   id: number;
   title: string;
   img: string;

@@ -97,3 +97,52 @@ export const listData = [
     longitude: -2.5879,
   },
 ];
+
+//data for filterformItems
+export const filterFormItems = [
+  {
+    type: "select",
+    label: "Type",
+    id: "type",
+    name: "type",
+    options: [
+      { id: 1, value: "", text: "any" },
+      { id: 2, value: "buy", text: "Buy" },
+      { id: 3, value: "rent", text: "Rent" },
+    ],
+  },
+  {
+    type: "select",
+    label: "Property",
+    id: "property",
+    name: "property",
+    options: [
+      { id: 1, value: "", text: "any" },
+      { id: 2, value: "apartment", text: "Apartment" },
+      { id: 3, value: "house", text: "House" },
+      { id: 4, value: "condo", text: "Condo" },
+      { id: 5, value: "land", text: "Land" },
+    ],
+  },
+  {
+    type: "number",
+    label: "Min Price",
+    id: "minPrice",
+    name: "minPrice",
+    placeholder: "any",
+  },
+  {
+    type: "text",
+    label: "Max Price",
+    id: "maxPrice",
+    name: "maxPrice",
+    placeholder: "any",
+  },
+  {
+    type: "text",
+    label: "Bedroom",
+    id: "bedroom",
+    name: "bedroom",
+    placeholder: "any",
+  },
+];

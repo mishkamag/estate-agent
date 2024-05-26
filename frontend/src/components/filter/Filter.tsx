@@ -1,3 +1,4 @@
+import { filterFormItems } from "../../data";
 import "./filter.scss";
 
 function Filter() {
@@ -18,41 +19,27 @@ function Filter() {
         </div>
       </div>
       <div className="bottom">
-        <div className="item">
-          <label htmlFor="type">Type</label>
-          <select name="type" id="type">
-            <option value="">any</option>
-            <option value="buy">Buy</option>
-            <option value="rent">Rent</option>
-          </select>
-        </div>
-        <div className="item">
-          <label htmlFor="property">Property</label>
-          <select name="property" id="property">
-            <option value="">any</option>
-            <option value="apartment">Apartment</option>
-            <option value="house">House</option>
-            <option value="condo">Condo</option>
-            <option value="land">Land</option>
-          </select>
-        </div>
-        <div className="item">
-          <label htmlFor="minPrice">Min Price</label>
-          <input
-            type="number"
-            id="minPrice"
-            name="minPrice"
-            placeholder="any"
-          />
-        </div>
-        <div className="item">
-          <label htmlFor="maxPrice">Max Price</label>
-          <input type="text" id="maxPrice" name="maxPrice" placeholder="any" />
-        </div>
-        <div className="item">
-          <label htmlFor="bedroom">Bedroom</label>
-          <input type="text" id="bedroom" name="bedroom" placeholder="any" />
-        </div>
+        {filterFormItems.map((item) => (
+          <div className="item" key={item.id}>
+            <label htmlFor={item.id}>{item.label}</label>
+            {item.type === "select" ? (
+              <select name={item.name} id={item.id}>
+                {item.options?.map((option) => (
+                  <option value={option.value} key={option.id}>
+                    {option.text}
+                  </option>
+                ))}
+              </select>
+            ) : (
+              <input
+                type={item.type}
+                id={item.id}
+                name={item.name}
+                placeholder={item.placeholder}
+              />
+            )}
+          </div>
+        ))}
         <button>
           <img src="/search.png" alt="" />
         </button>

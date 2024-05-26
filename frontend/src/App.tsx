@@ -1,7 +1,7 @@
 import Home from "./pages/home/Home";
 import Layout from "./pages/layout/Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import List from "./pages/list/List";
+import Lists from "./pages/list/Lists";
 import SinglePage from "./pages/singlePage/SinglePage";
 
 function App() {
@@ -15,11 +15,11 @@ function App() {
           element: <Home />,
         },
         {
-          path: "/list",
-          element: <List />,
+          path: "/lists",
+          element: <Lists />,
         },
         {
-          path: "/:id",
+          path: "/lists/:id",
           element: <SinglePage />,
         },
       ],

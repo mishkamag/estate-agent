@@ -1,0 +1,24 @@
+.slider {
+  display: flex;
+  width: 100%;
+  min-height: 350px;
+  gap: 22px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+
+  .bgImage {
+    flex: 3;
+  }
+  .smallImages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

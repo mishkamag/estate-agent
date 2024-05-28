@@ -1,8 +1,8 @@
 import Home from "./pages/home/Home";
 import Layout from "./pages/layout/Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Lists from "./pages/list/Lists";
-import SinglePage from "./pages/singlePage/SinglePage";
+import EstateListPage from "./pages/estateListPage/EstateListPage";
+import EstateDetailsPage from "./pages/estateDetailsPage/EstateDetailsPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -16,11 +16,11 @@ function App() {
         },
         {
           path: "/lists",
-          element: <Lists />,
+          element: <EstateListPage />,
         },
         {
           path: "/lists/:id",
-          element: <SinglePage />,
+          element: <EstateDetailsPage />,
         },
       ],
     },

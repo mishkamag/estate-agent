@@ -1,17 +1,17 @@
 import Filter from "../../components/filter/Filter";
 import Map from "../../components/map/Map";
-import SingleList from "../../components/singleList/SingleList";
+import EstateCard from "../../components/estateCard/EstateCard";
 import { listData } from "../../data";
-import "./lists.scss";
+import "./estateListPage.scss";
 
-const Lists = () => {
+const EstateListPage = () => {
   return (
-    <section className="lists">
+    <section className="estateLists">
       <div className="listContainer">
         <div className="wrapper">
           <Filter />
           {listData.map((list) => (
-            <SingleList key={list.id} {...list} />
+            <EstateCard key={list.id} {...list} />
           ))}
         </div>
       </div>
@@ -22,4 +22,4 @@ const Lists = () => {
   );
 };
 
-export default Lists;
+export default EstateListPage;

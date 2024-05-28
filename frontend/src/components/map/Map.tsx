@@ -2,7 +2,7 @@ import "./map.scss";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet/dist/images/marker-shadow.png";
-import { ListDataType } from "../singleList/SingleList";
+import { ListDataType } from "../estateCard/EstateCard";
 import { Link } from "react-router-dom";
 
 type MapProps = {

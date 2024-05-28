@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import "./singleList.scss";
+import "./estateCard.scss";
 
-export type ListDataType = {
+export type EstateDataType = {
   id: number;
   title: string;
   img: string;
@@ -13,7 +13,7 @@ export type ListDataType = {
   longitude?: number;
 };
 
-const SingleList = (list: ListDataType) => {
+const EstateCard = (list: EstateDataType) => {
   const { id, title, img, bedroom, bathroom, price, address } = list;
 
   return (
@@ -55,4 +55,4 @@ const SingleList = (list: ListDataType) => {
   );
 };
 
-export default SingleList;
+export default EstateCard;

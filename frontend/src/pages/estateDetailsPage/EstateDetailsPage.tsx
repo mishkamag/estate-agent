@@ -1,6 +1,7 @@
 import "./estateDetailsPage.scss";
 import Slider from "../../components/slider/Slider";
 import { singleEstateData, userData } from "../../data";
+import Map from "../../components/map/Map";
 
 function EstateDetailsPage() {
   return (
@@ -93,7 +94,9 @@ function EstateDetailsPage() {
             </div>
           </div>
           <p className="title">Location</p>
-          <div className="mapContainer">map</div>
+          <div className="mapContainer">
+            <Map listData={[singleEstateData]} />
+          </div>
           <div className="buttons">
             <button>
               <img src="/chat.png" alt="" />

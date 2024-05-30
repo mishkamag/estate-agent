@@ -1,16 +1,21 @@
 import { Link } from "react-router-dom";
 import "./estateCard.scss";
-
 export type EstateDataType = {
   id: number;
   title: string;
-  img: string;
-  bedroom: number;
+  img?: string;
+  bedroom?: number;
   bathroom: number;
   price: number;
   address: string;
   latitude?: number;
   longitude?: number;
+  size?: number;
+  city?: string;
+  school?: string;
+  bus?: string;
+  restaurant?: string;
+  description?: string;
 };
 
 const EstateCard = (list: EstateDataType) => {

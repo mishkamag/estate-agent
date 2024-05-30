@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./estateCard.scss";
+
 export type EstateDataType = {
   id: number;
   title: string;

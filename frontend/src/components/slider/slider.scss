@@ -1,3 +1,5 @@
+@import "../../styles/responsive.scss";
+
 .slider {
   display: flex;
   width: 100%;
@@ -14,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 999;
 
     .arrow {
       flex: 1;
@@ -22,6 +25,14 @@
 
       img {
         width: 45px;
+
+        @include md {
+          width: 28px;
+        }
+
+        @include md {
+          width: 19px;
+        }
       }
     }
 

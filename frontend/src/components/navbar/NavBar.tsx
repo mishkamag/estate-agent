@@ -28,7 +28,8 @@ const Navbar = () => {
             />
             <span>Mikheili Magla</span>
             <Link className="profile" to="/profile">
-              Profile
+              <div className="notification">2</div>
+              <span>Profile</span>
             </Link>
           </div>
         ) : (

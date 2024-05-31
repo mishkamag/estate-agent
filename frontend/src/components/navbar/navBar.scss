@@ -74,11 +74,28 @@ nav {
         margin-right: 20px;
       }
 
+      span {
+        @include sm {
+          display: none;
+        }
+      }
+
       .profile {
         padding: 12px 26px;
         background-color: #fece51;
         cursor: pointer;
         border: none;
+        position: relative;
+
+        .notification {
+          position: absolute;
+          background-color: red;
+          padding: 6px;
+          border-radius: 50%;
+          color: white;
+          right: -5px;
+          top: -5px;
+        }
       }
     }
 

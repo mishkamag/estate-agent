@@ -3,6 +3,7 @@ import Layout from "./pages/layout/Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import EstateListPage from "./pages/estateListPage/EstateListPage";
 import EstateDetailsPage from "./pages/estateDetailsPage/EstateDetailsPage";
+import Profile from "./pages/profile/Profile";
 
 function App() {
   const router = createBrowserRouter([
@@ -21,6 +22,10 @@ function App() {
         {
           path: "/lists/:id",
           element: <EstateDetailsPage />,
+        },
+        {
+          path: "/profile",
+          element: <Profile />,
         },
       ],
     },

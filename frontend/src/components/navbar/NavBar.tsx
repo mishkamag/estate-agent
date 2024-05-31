@@ -1,8 +1,11 @@
 import { useState } from "react";
 import "./navBar.scss";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+
+  const user = true;
 
   return (
     <nav>
@@ -17,10 +20,26 @@ const Navbar = () => {
         <a href="/">Agents</a>
       </div>
       <div className="nav-registration">
-        <a href="/">Sign In</a>
-        <a href="/" className="signUp">
-          Sign Up
-        </a>
+        {user ? (
+          <div className="user">
+            <img
+              src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt=""
+            />
+            <span>Mikheili Magla</span>
+            <Link className="profile" to="/profile">
+              Profile
+            </Link>
+          </div>
+        ) : (
+          <>
+            <a href="/">Sign In</a>
+            <a href="/" className="signUp">
+              Sign Up
+            </a>
+          </>
+        )}
+
         <div className="menuIcon" onClick={() => setShowMenu((prev) => !prev)}>
           <img src={showMenu ? "/close.jpg" : "/menu.png"} alt="" />
         </div>

@@ -1,61 +1,80 @@
+@import "../../styles/responsive.scss";
+
 .profile {
   display: flex;
   height: 100%;
 
+  @include md {
+    overflow-y: scroll;
+    flex-direction: column;
+  }
+
   .detailsContainer {
     flex: 3;
-    height: 100vh;
     overflow-y: scroll;
+    padding-bottom: 50px;
+
+    @include md {
+      flex: none;
+      height: max-content;
+    }
 
     .wrapper {
-      padding-right: 45px;
-      gap: 50px;
+      padding-right: 50px;
       display: flex;
       flex-direction: column;
+      gap: 50px;
 
       .title {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
 
         h1 {
-          color: gray;
+          font-weight: 300;
         }
 
         button {
-          padding: 12px 26px;
+          padding: 12px 24px;
           background-color: #fece51;
-          border: none;
           cursor: pointer;
-
-          &:hover {
-            background-color: #fece41;
-          }
+          border: none;
         }
       }
 
       .info {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
 
         span {
           display: flex;
           align-items: center;
-          gap: 15px;
+          gap: 20px;
+        }
 
-          img {
-            width: 44px;
-            height: 44px;
-            object-fit: cover;
-            border-radius: 50%;
-          }
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
         }
       }
     }
   }
-
   .chatContainer {
     flex: 2;
+    background-color: #fcf5f3;
+    height: 100%;
+
+    @include md {
+      flex: none;
+      height: max-content;
+    }
+
+    .wrapper {
+      padding: 0px 20px;
+      height: 100%;
+    }
   }
 }

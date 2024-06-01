@@ -27,7 +27,7 @@ const Navbar = () => {
               alt=""
             />
             <span>Mikheili Magla</span>
-            <Link className="profile" to="/profile">
+            <Link className="profileInfo" to="/profile">
               <div className="notification">2</div>
               <span>Profile</span>
             </Link>

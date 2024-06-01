@@ -1,0 +1,61 @@
+.profile {
+  display: flex;
+  height: 100%;
+
+  .detailsContainer {
+    flex: 3;
+    height: 100vh;
+    overflow-y: scroll;
+
+    .wrapper {
+      padding-right: 45px;
+      gap: 50px;
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+          color: gray;
+        }
+
+        button {
+          padding: 12px 26px;
+          background-color: #fece51;
+          border: none;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #fece41;
+          }
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          img {
+            width: 44px;
+            height: 44px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .chatContainer {
+    flex: 2;
+  }
+}

@@ -109,7 +109,7 @@ nav {
 
     .menuIcon {
       display: none;
-      z-index: 999;
+      z-index: 999999;
 
       @include sm {
         display: block;
@@ -135,6 +135,7 @@ nav {
       justify-content: center;
       align-items: center;
       font-size: 22px;
+      z-index: 99999;
 
       &.active {
         right: 0;

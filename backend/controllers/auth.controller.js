@@ -1,4 +1,5 @@
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 import prisma from "../lib/prisma.js";
 
 export const register = async (req, res) => {
@@ -24,6 +25,38 @@ export const register = async (req, res) => {
   }
 };
 
-export const login = (req, res) => {};
+export const login = async (req, res) => {
+  const { username, password } = req.body;
+  try {
+    //check if the user exists
+    const user = await prisma.user.findUnique({
+      where: { username: username },
+    });
+    if (!user) return res.status(401).json({ message: "Invalid Credentials" });
+
+    //check if password is correct
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+    if (!isPasswordValid)
+      return res.status(401).json({ message: "Invalid Credentials" });
+
+    //generate cookie token and send user
+    const token = jwt.sign(
+      {
+        id: user.id,
+      },
+      process.env.JWT_SECRET_KEY,
+      { expiresIn: 24 * 3600000 }
+    );
+    res
+      .cookie("token", token, {
+        httpOnly: true,
+        maxAge: 24 * 3600000, // 1 day in milliseconds
+      })
+      .status(200)
+      .json({ message: "Login Successful" });
+  } catch (error) {
+    res.status(500).json({ message: "Failed to login" });
+  }
+};
 
 export const logout = (req, res) => {};

@@ -1,8 +1,11 @@
 import express from "express";
+import cors from "cors";
 import cookieParser from "cookie-parser";
 import authRoute from "./routes/auth.route.js";
 
 const app = express();
+
+app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true })); //send cookie  need credentials
 app.use(express.json());
 app.use(cookieParser());
 

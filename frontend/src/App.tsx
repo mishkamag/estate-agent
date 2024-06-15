@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import EstateListPage from "./pages/estateListPage/EstateListPage";
 import EstateDetailsPage from "./pages/estateDetailsPage/EstateDetailsPage";
 import Profile from "./pages/profile/Profile";
+import Register from "./pages/register/Register";
 
 function App() {
   const router = createBrowserRouter([
@@ -26,6 +27,10 @@ function App() {
         {
           path: "/profile",
           element: <Profile />,
+        },
+        {
+          path: "/register",
+          element: <Register />,
         },
       ],
     },
